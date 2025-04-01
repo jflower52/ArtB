@@ -1,0 +1,148 @@
+/* 공지사항 및 모바일 앱 섹션 스타일 - 반응형 웹 적용 */
+
+#notificationMobileApp {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+#notificationMobileApp .notification,
+#notificationMobileApp .mobileApp {
+  width: 90%;
+  max-width: 520px;
+  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#notificationMobileApp .notificationTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#notificationMobileApp .notificationTitle h2 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+#notificationMobileApp .more-link {
+  color: #666;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 3px;
+}
+
+#notificationMobileApp .more-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffa751;
+  transition: width 0.3s ease;
+}
+
+#notificationMobileApp .more-link:hover {
+  color: #ffa751;
+}
+
+#notificationMobileApp .more-link:hover::after {
+  width: 100%;
+}
+
+#notificationMobileApp .divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+#notificationMobileApp .notificationList ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#notificationMobileApp .notificationList ul li:last-child {
+  border-bottom: none;
+}
+
+#notificationMobileApp .notificationList .notice-title {
+  color: #333;
+  font-weight: 500;
+}
+
+#notificationMobileApp .notificationList .date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+#notificationMobileApp .mobileApp h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+#notificationMobileApp .mobileApp p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+#notificationMobileApp .app-buttons .google-play {
+  margin-bottom: 15px;
+}
+
+#notificationMobileApp .app-buttons button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background-color: #ffb0b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#notificationMobileApp .app-buttons button img {
+  width: 20px;
+  height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  #notificationMobileApp {
+    padding: 60px 0;
+    gap: 50px;
+  }
+
+  #notificationMobileApp .notification,
+  #notificationMobileApp .mobileApp {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  #notificationMobileApp {
+    padding: 20px 0;
+    gap: 30px;
+  }
+
+  #notificationMobileApp .notification,
+  #notificationMobileApp .mobileApp {
+    width: 90%;
+  }
+}

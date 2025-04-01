@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="아트비 - 웹툰, 아티스트 커미션 및 창작 콘텐츠 플랫폼" />
     <!-- CSS -->
     <link rel="stylesheet" href="./CSS/INDEX.css" />
+    <link rel="stylesheet" href="./CSS/Menu.css" />
+    <link rel="stylesheet" href="./CSS/Main-Top-Swiper.css" />
+    <!-- <link rel="stylesheet" href="./CSS/Ad-Banner.css" /> -->
+    <link rel="stylesheet" href="./CSS/Popular-Writer.css" />
+    <link rel="stylesheet" href="./CSS/ArtB-Info.css" />
+    <link rel="stylesheet" href="./CSS/Notification-MobileApp.css" />
+    <link rel="stylesheet" href="./CSS/Footer.css" />
     <!-- SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- 아이콘 -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <title>아트비 - ArtB | 웹툰과 아티스트 커미션 플랫폼</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>아트비 - ArtB</title>
   </head>
   <body>
     <header>
       <div id="menu">
-        <a href="index.html" onfocus="this.blur();" class="logo">
-          <img src="./IMG/아트비.png" alt="아트비 홈" title="아트비 홈" />
+        <a href="index.html" onfocus="this.blur();">
+          <img src="./IMG/메뉴/아트비.png" alt="아트비 홈" title="아트비 홈" />
         </a>
-        <nav>
+        <nav class="web-nav">
           <ul>
             <li><a href="./webtoon.html">웹툰</a></li>
             <li><a href="./artist-commission.html">커미션 받아요</a></li>
@@ -31,11 +35,11 @@
           </ul>
         </nav>
         <div id="login">
-          <a href="#"><i class="fas fa-user"></i> 로그인</a>
-          <a href="#"><i class="fas fa-user-plus"></i> 회원가입</a>
+          <a href="#">로그인</a>
+          <a href="#">회원가입</a>
         </div>
-        <div class="mobile-menu-button">
-          <i class="fas fa-bars"></i>
+        <div class="hamburger-img" onclick="toggleMenu()">
+          <img src="./IMG/메뉴/햄버거.png" alt="메뉴 버튼" />
         </div>
       </div>
     </header>
@@ -43,272 +47,196 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./IMG/샘플.jpg" alt="슬라이드 이미지 1" />
-          <div class="slide-content">
-            <h3>타이틀</h3>
-            <p>설명</p>
-          </div>
+          <img src="./IMG/메인 슬라이드/야너두.png" alt="이미지" />
+          <div class="slide-content"></div>
         </div>
         <div class="swiper-slide">
-          <img src="./IMG/샘플.jpg" alt="슬라이드 이미지 2" />
-          <div class="slide-content">
-            <h3>타이틀</h3>
-            <p>설명</p>
-          </div>
+          <img src="./IMG/메인 슬라이드/안전거래.png" alt="이미지" />
+          <div class="slide-content"></div>
         </div>
         <div class="swiper-slide">
-          <img src="./IMG/샘플.jpg" alt="슬라이드 이미지 3" />
-          <div class="slide-content">
-            <h3>타이틀</h3>
-            <p>설명</p>
-          </div>
+          <img src="./IMG/메인 슬라이드/다양결제.png" alt="이미지" />
+          <div class="slide-content"></div>
         </div>
         <div class="swiper-slide">
-          <img src="./IMG/샘플.jpg" alt="슬라이드 이미지 4" />
-          <div class="slide-content">
-            <h3>타이틀</h3>
-            <p>설명</p>
-          </div>
+          <img src="./IMG/메인 슬라이드/이벤트.png" alt="이미지" />
+          <div class="slide-content"></div>
         </div>
         <div class="swiper-slide">
-          <img src="./IMG/샘플.jpg" alt="슬라이드 이미지 5" />
-          <div class="slide-content">
-            <h3>타이틀</h3>
-            <p>설명</p>
-          </div>
+          <img src="./IMG/메인 슬라이드/맴버쉽.png" alt="이미지" />
+          <div class="slide-content"></div>
         </div>
       </div>
-      <!-- 페이지네이션 -->
-      <div class="swiper-pagination"></div>
-      <!-- 네비게이션 버튼 -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
     </div>
 
-    <section id="popular-webtoon">
-      <h3>인기 웹툰</h3>
-      <ul>
-        <li>
-          <a href="#"><img src="./IMG/인기 웹툰/웹툰 샘플.jpg" alt="웹툰 1" /></a>
-          <div class="webtoon-info">
-            <a href="#">제목</a>
-            <a href="#">작가</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"><img src="./IMG/인기 웹툰/웹툰 샘플.jpg" alt="웹툰 2" /></a>
-          <div class="webtoon-info">
-            <a href="#">제목</a>
-            <a href="#">작가</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"><img src="./IMG/인기 웹툰/웹툰 샘플.jpg" alt="웹툰 3" /></a>
-          <div class="webtoon-info">
-            <a href="#">제목</a>
-            <a href="#">작가</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"><img src="./IMG/인기 웹툰/웹툰 샘플.jpg" alt="웹툰 4" /></a>
-          <div class="webtoon-info">
-            <a href="#">제목</a>
-            <a href="#">작가</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"><img src="./IMG/인기 웹툰/웹툰 샘플.jpg" alt="웹툰 5" /></a>
-          <div class="webtoon-info">
-            <a href="#">제목</a>
-            <a href="#">작가</a>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <!-- <section class="ad-banner">
+      <a href="https://x.com/rukario66" class="ad-banner=img">
+        <img src="./IMG/광고/오른쪽.png" alt="광고 이미지" title="광고 이미지" />
+      </a>
+    </section> -->
 
     <section id="popular-writer">
-      <h3>인기 작가님</h3>
-      <ul>
+      <div class="popular-writer-title">이달의 인기 작가님 🎨</div>
+      <ul class="popular-writer-img1">
         <li>
-          <a href="#"><img src="./IMG/인기 작가/프리렌.png" alt="인기 작가 1" /></a>
-          <div class="popular-writer-info">
-            <a href="#">작가</a>
-          </div>
+          <a href="https://x.com/rukario66"
+            ><img
+              src="./IMG/이달의 인기 작가님/1.jpg"
+              alt="삼앤 작가님"
+              title="삼앤 작가님"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="./IMG/인기 작가/mel.png" alt="인기 작가 2" /></a>
-          <div class="popular-writer-info">
-            <a href="#">작가</a>
-          </div>
+          <a href="https://x.com/_SeoMEL"
+            ><img
+              src="./IMG/이달의 인기 작가님/2.png"
+              alt="서멜 작가님"
+              title="서멜 작가님"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="./IMG/인기 작가/별.png" alt="인기 작가 3" /></a>
-          <div class="popular-writer-info">
-            <a href="#">작가</a>
-          </div>
+          <a href="https://x.com/VAVAMVA94"
+            ><img
+              src="./IMG/이달의 인기 작가님/3.png"
+              alt="바밤바 작가님"
+              title="바밤바 작가님"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="./IMG/인기 작가/jflower.png" alt="인기 작가 4" /></a>
-          <div class="popular-writer-info">
-            <a href="#">작가</a>
-          </div>
+          <a href="https://x.com/kingnipig"
+            ><img
+              src="./IMG/이달의 인기 작가님/4.png"
+              alt="킹니피그 작가님"
+              title="킹니피그 작가님"
+          /></a>
+        </li>
+      </ul>
+      <ul class="popular-writer-img2">
+        <li>
+          <a href="#"
+            ><img
+              src="./IMG/이달의 인기 작가님/5.jpg"
+              alt="방가 작가님"
+              title="방가 작가님"
+          /></a>
         </li>
         <li>
-          <a href="#"><img src="./IMG/인기 작가/NEKO.png" alt="인기 작가 5" /></a>
-          <div class="popular-writer-info">
-            <a href="#">작가</a>
-          </div>
+          <a href="#"
+            ><img
+              src="./IMG/이달의 인기 작가님/6.jpg"
+              alt="자모 작가님"
+              title="자모 작가님"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="./IMG/이달의 인기 작가님/7.jpg"
+              alt="무나 작가님"
+              title="무나 작가님"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img
+              src="./IMG/이달의 인기 작가님/8.jpg"
+              alt="무리마 작가님"
+              title="무리마 작가님"
+          /></a>
         </li>
       </ul>
     </section>
 
-    <section id="new-writer">
-      <h3>신규 작가님</h3>
+    <section id="ArtB-info">
+      <div class="ArtB-info-title">편리한 서비스들이 아트비에 있어요!</div>
       <ul>
         <li>
-          <a href="#"><img src="./IMG/신규 작가/프리렌.png" alt="신규 작가 1" /></a>
-          <div class="new-writer-info">
-            <a href="#">신규작가1</a>
-          </div>
+          <img src="./IMG/아트비 정보/1.png" alt="ArtB 설명1" />
         </li>
         <li>
-          <a href="#"><img src="./IMG/신규 작가/mel.png" alt="신규 작가 2" /></a>
-          <div class="new-writer-info">
-            <a href="#">신규작가2</a>
-          </div>
+          <img src="./IMG/아트비 정보/2.png" alt="ArtB 설명2" />
         </li>
         <li>
-          <a href="#"><img src="./IMG/신규 작가/NEKO.png" alt="신규 작가 3" /></a>
-          <div class="new-writer-info">
-            <a href="#">신규작가3</a>
-          </div>
+          <img src="./IMG/아트비 정보/3.png" alt="ArtB 설명3" />
         </li>
         <li>
-          <a href="#"><img src="./IMG/신규 작가/별.png" alt="신규 작가 4" /></a>
-          <div class="new-writer-info">
-            <a href="#">신규작가4</a>
-          </div>
-        </li>
-        <li>
-          <a href="#"><img src="./IMG/신규 작가/jflower.png" alt="신규 작가 5" /></a>
-          <div class="new-writer-info">
-            <a href="#">신규작가5</a>
-          </div>
+          <img src="./IMG/아트비 정보/4.png" alt="ArtB 설명4" />
         </li>
       </ul>
-    </section>
-
-    <section id="user-commission">
-      <h3>커미션 구해요</h3>
-      <div class="commission-grid">
-        <div class="commission-card">
-          <div class="commission-header">
-            <span class="badge">일러스트</span>
-            <h4>캐릭터 일러스트 커미션 구해요</h4>
-          </div>
-          <div class="commission-body">
-            <p>오리지널 캐릭터를 밝고 귀여운 스타일로 그려주실 작가님 찾습니다.</p>
-            <div class="commission-details">
-              <span><i class="fas fa-coins"></i> 30,000 ~ 50,000원</span>
-              <span><i class="fas fa-calendar"></i> ~2025.04.10</span>
-            </div>
-          </div>
-        </div>
-        <div class="commission-card">
-          <div class="commission-header">
-            <span class="badge">만화</span>
-            <h4>웹툰 스토리보드 작업 의뢰</h4>
-          </div>
-          <div class="commission-body">
-            <p>판타지 장르 웹툰 스토리보드 작업해주실 분 구합니다.</p>
-            <div class="commission-details">
-              <span><i class="fas fa-coins"></i> 협의</span>
-              <span><i class="fas fa-calendar"></i> ~2025.04.05</span>
-            </div>
-          </div>
-        </div>
-        <div class="commission-card">
-          <div class="commission-header">
-            <span class="badge">디자인</span>
-            <h4>SNS 프로필 아이콘 디자인</h4>
-          </div>
-          <div class="commission-body">
-            <p>개인 SNS용 프로필 아이콘 디자인 의뢰합니다.</p>
-            <div class="commission-details">
-              <span><i class="fas fa-coins"></i> 20,000원</span>
-              <span><i class="fas fa-calendar"></i> ~2025.03.30</span>
-            </div>
-          </div>
-        </div>
-        <div class="commission-card">
-          <div class="commission-header">
-            <span class="badge">일러스트</span>
-            <h4>게임 캐릭터 팬아트 커미션</h4>
-          </div>
-          <div class="commission-body">
-            <p>좋아하는 게임 캐릭터 팬아트 의뢰드립니다.</p>
-            <div class="commission-details">
-              <span><i class="fas fa-coins"></i> 40,000원</span>
-              <span><i class="fas fa-calendar"></i> ~2025.04.15</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="view-more">
-        <a href="./user-commission.html" class="btn-more">
-          <span>더 보기</span>
-          <i class="fas fa-chevron-right"></i>
-        </a>
-      </div>
     </section>
 
     <section id="notificationMobileApp">
       <div class="notification">
         <div class="notificationTitle">
-          <h2>공지사항</h2>
-          <a href="#">더보기 <i class="fas fa-angle-right"></i></a>
+          <h2>📢 공지사항</h2>
+          <a href="#" class="more-link">더보기</a>
         </div>
-        <div class="devider"></div>
-        <div>
+        <div class="divider"></div>
+        <div class="notificationList">
           <ul>
-            <li><span>아트비 서비스 점검 안내</span><span class="date">2025.03.20</span></li>
-            <li><span>3월 인기 작가 이벤트 안내</span><span class="date">2025.03.15</span></li>
-            <li><span>신규 기능 업데이트 소식</span><span class="date">2025.03.10</span></li>
-            <li><span>웹툰 공모전 개최 안내</span><span class="date">2025.03.05</span></li>
-            <li><span>아트비 모바일 앱 출시 안내</span><span class="date">2025.03.01</span></li>
+            <li>
+              <span class="notice-title">아트비 서비스 업데이트 안내</span>
+              <span class="date">2025.03.15</span>
+            </li>
+            <li>
+              <span class="notice-title">신규 웹툰 작가 모집 공고</span>
+              <span class="date">2025.02.28</span>
+            </li>
+            <li>
+              <span class="notice-title">커미션 서비스 이용 가이드</span>
+              <span class="date">2025.02.10</span>
+            </li>
+            <li>
+              <span class="notice-title">아트비 고객 만족도 조사</span>
+              <span class="date">2025.01.25</span>
+            </li>
+            <li>
+              <span class="notice-title">연말 이벤트 결과 발표</span>
+              <span class="date">2025.01.10</span>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="mobileApp">
-        <h2>모바일 앱 설치 안내</h2>
+        <h2>🚀 모바일 앱으로 더 쉽게!</h2>
         <p>
-          아트비 모바일 앱으로 <strong>언제 어디서나</strong> 좋아하는 웹툰과 아티스트를 만나보세요.
-          앱 전용 할인 및 이벤트도 제공됩니다!
+          <strong>아트비 모바일 앱을</strong> 다운로드하고
+          <strong>어디서나 쉽고 빠르게</strong>
+          작가와 소통하고 다양한 콘텐츠를 즐겨보세요.
         </p>
-        <button><img src="./IMG/구글 플레이.svg" width="10px" height="auto" /> Google Play</button>
-        <button><img src="./IMG/앱 스토어.svg" width="10px" height="auto" /> App Store</button>
+        <div class="app-buttons">
+          <button class="google-play">
+            <img src="./IMG/모바일 앱/구글 플레이.svg" alt="Google Play" />
+            Google Play
+          </button>
+          <button class="app-store">
+            <img src="./IMG/모바일 앱/앱 스토어.svg" alt="App Store" />
+            App Store
+          </button>
+        </div>
       </div>
     </section>
 
     <footer>
       <div class="footerContent">
         <ul>
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">이용약관</a></li>
-          <li><a href="#">개인정보처리방침</a></li>
           <li><a href="#">고객센터</a></li>
-          <li><a href="#">제휴문의</a></li>
+          <li><a href="#">광고 · 사업문의</a></li>
+          <li><a href="#">의견 보내기</a></li>
+          <li><a href="#">이용 약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
         </ul>
         <div class="footerInformation">
-          <p>대표전화: 010-XXXX-XXXX</p>
-          <p>E-mail: <a href="mailto:XXXX@XXXX.XXX">XXXX@XXXX.com</a></p>
-          <p>대표자: XXX</p>
-          <p>© 2025 아트비(ArtB) 모든 권리 보유</p>
+          <p>대표: XXX &nbsp&nbsp&nbsp 전화: 010-XXXX-XXXX</p>
+          <p>E-mail: <a href="mailto:메일주소">XXXX@XXXX.com</a></p>
+          <p>사업자등록번호: XXX-XX-XXXXX</p>
+          <p>© 2025 XXX</p>
         </div>
       </div>
     </footer>
 
-    <script src="./JS/index.js"></script>
+    <script src="./JS/hambutger.js"></script>
+    <script src="./JS/main-top-swiper.js"></script>
   </body>
 </html>

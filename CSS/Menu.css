@@ -1,0 +1,125 @@
+/** ===== 공통 스타일 ===== */
+/* 고정된 헤더 스타일 */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* 로고 이미지 크기 조정 */
+#menu a img {
+  width: 100px;
+  height: auto;
+}
+
+/* PC 기본 네비게이션 메뉴 */
+#menu .web-nav ul {
+  display: flex;
+  white-space: nowrap;
+}
+
+#menu .web-nav ul li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+#menu .web-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 로그인 & 회원가입 버튼 */
+#menu #login {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#menu #login a {
+  padding: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 햄버거 아이콘 크기 및 클릭 가능 설정 */
+#menu .hamburger-img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+#menu .hamburger-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/** ===== 반응형 스타일 ===== */
+@media screen and (max-width: 1024px) {
+  /* 모바일 화면에서 헤더 스타일 */
+  #menu {
+    padding: 1.25rem 30px;
+    justify-content: space-between;
+  }
+
+  /* 모바일 네비게이션 (초기에는 숨김) */
+  #menu .web-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  /* 햄버거 메뉴 클릭 시 나타나도록 설정 */
+  #menu .web-nav.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* 모바일 메뉴 리스트 스타일 */
+  #menu .web-nav ul {
+    flex-direction: column;
+  }
+
+  #menu .web-nav ul li {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* 모바일에서는 로그인 버튼 숨김 */
+  #menu #login a {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* PC 화면에서 중앙 정렬 및 넓은 패딩 적용 */
+  #menu {
+    padding: 1.25rem 300px;
+    justify-content: center;
+    gap: 150px;
+  }
+
+  /* PC 버전에서는 햄버거 아이콘 숨김 */
+  #menu .hamburger-img {
+    display: none;
+  }
+}
